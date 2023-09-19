@@ -26,7 +26,7 @@ func (m *Note) Move(originalPath string, newPath string) error {
 		return errors.New(NoteDoesNotExistError)
 	}
 
-	message := fmt.Sprintf(`Moved note 
+	message := fmt.Sprintf(`Moved note
 from %s
 to %s`, o, n)
 

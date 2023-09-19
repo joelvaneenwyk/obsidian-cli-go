@@ -25,7 +25,7 @@ func TestDeleteNote(t *testing.T) {
 	t.Run("vault.DefaultName returns an error", func(t *testing.T) {
 		// Arrange
 		vault := mocks.MockVaultOperator{
-			DefaultNameErr: errors.New("Failed to get default vault name"),
+			DefaultNameErr: errors.New("failed to get default vault name"),
 		}
 		// Act
 		err := actions.DeleteNote(&vault, &mocks.MockNoteManager{}, actions.DeleteParams{
@@ -38,7 +38,7 @@ func TestDeleteNote(t *testing.T) {
 	t.Run("vault.Path returns an error", func(t *testing.T) {
 		// Arrange
 		vault := mocks.MockVaultOperator{
-			PathError: errors.New("Failed to get vault path"),
+			PathError: errors.New("failed to get vault path"),
 		}
 		// Act
 		err := actions.DeleteNote(&vault, &mocks.MockNoteManager{}, actions.DeleteParams{
@@ -51,7 +51,7 @@ func TestDeleteNote(t *testing.T) {
 	t.Run("note.Delete returns an error", func(t *testing.T) {
 		// Arrange
 		note := mocks.MockNoteManager{
-			DeleteErr: errors.New("Could not delete"),
+			DeleteErr: errors.New("could not delete"),
 		}
 		// Act
 		err := actions.DeleteNote(&mocks.MockVaultOperator{}, &note, actions.DeleteParams{

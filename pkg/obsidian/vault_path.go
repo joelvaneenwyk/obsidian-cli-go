@@ -20,14 +20,14 @@ func (v *Vault) Path() (string, error) {
 	content, err := os.ReadFile(obsidianConfigFile)
 
 	if err != nil {
-		return "", errors.New(ObsidianConfigReadError)
+		return "", errors.New(ConfigReadError)
 	}
 
 	vaultsContent := ObsidianVaultConfig{}
 	err = json.Unmarshal(content, &vaultsContent)
 
 	if err != nil {
-		return "", errors.New(ObsidianConfigParseError)
+		return "", errors.New(ConfigParseError)
 	}
 
 	for _, element := range vaultsContent.Vaults {
@@ -36,5 +36,5 @@ func (v *Vault) Path() (string, error) {
 		}
 	}
 
-	return "", errors.New(ObsidianConfigVaultNotFoundError)
+	return "", errors.New(ConfigVaultNotFoundError)
 }

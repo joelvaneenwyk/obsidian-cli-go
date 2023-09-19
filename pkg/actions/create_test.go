@@ -25,7 +25,7 @@ func TestCreateNote(t *testing.T) {
 	t.Run("vault.DefaultName returns an error", func(t *testing.T) {
 		// Arrange
 		vault := mocks.MockVaultOperator{
-			DefaultNameErr: errors.New("Failed to get vault name"),
+			DefaultNameErr: errors.New("failed to get vault name"),
 		}
 		// Act
 		err := actions.CreateNote(&vault, &mocks.MockUriManager{}, actions.CreateParams{
@@ -38,7 +38,7 @@ func TestCreateNote(t *testing.T) {
 	t.Run("uri.Execute returns an error", func(t *testing.T) {
 		// Arrange
 		uri := mocks.MockUriManager{
-			ExecuteErr: errors.New("Failed to execute URI"),
+			ExecuteErr: errors.New("failed to execute URI"),
 		}
 		// Act
 		err := actions.CreateNote(&mocks.MockVaultOperator{}, &uri, actions.CreateParams{

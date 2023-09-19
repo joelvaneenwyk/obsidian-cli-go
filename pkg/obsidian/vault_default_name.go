@@ -25,7 +25,7 @@ func (v *Vault) DefaultName() (string, error) {
 	// read file
 	content, err := os.ReadFile(cliConfigFile)
 	if err != nil {
-		return "", errors.New(ObsidianCLIConfigReadError)
+		return "", errors.New(CliConfigReadError)
 	}
 
 	// unmarshal json
@@ -33,11 +33,11 @@ func (v *Vault) DefaultName() (string, error) {
 	err = json.Unmarshal(content, &cliConfig)
 
 	if err != nil {
-		return "", errors.New(ObsidianCLIConfigParseError)
+		return "", errors.New(CliConfigParseError)
 	}
 
 	if cliConfig.DefaultVaultName == "" {
-		return "", errors.New(ObsidianCLIConfigParseError)
+		return "", errors.New(CliConfigParseError)
 	}
 
 	v.Name = cliConfig.DefaultVaultName
@@ -49,7 +49,7 @@ func (v *Vault) SetDefaultName(name string) error {
 	cliConfig := CliConfig{DefaultVaultName: name}
 	jsonContent, err := JsonMarshal(cliConfig)
 	if err != nil {
-		return errors.New(ObsidianCLIConfigGenerateJSONError)
+		return errors.New(CliConfigGenerateJsonError)
 	}
 
 	// get cliConfig path
@@ -61,13 +61,13 @@ func (v *Vault) SetDefaultName(name string) error {
 	// create directory
 	err = os.MkdirAll(obsConfigDir, os.ModePerm)
 	if err != nil {
-		return errors.New(ObsidianCLIConfigDirWriteEror)
+		return errors.New(CliConfigDirWriteError)
 	}
 
 	// create and write file
 	err = os.WriteFile(obsConfigFile, jsonContent, 0644)
 	if err != nil {
-		return errors.New(ObsidianCLIConfigWriteError)
+		return errors.New(CliConfigWriteError)
 	}
 
 	v.Name = name

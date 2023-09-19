@@ -28,7 +28,7 @@ func TestMoveNote(t *testing.T) {
 	t.Run("vault.DefaultName returns an error", func(t *testing.T) {
 		// Arrange
 		vault := mocks.MockVaultOperator{
-			DefaultNameErr: errors.New("Failed to get vault name"),
+			DefaultNameErr: errors.New("failed to get vault name"),
 		}
 		// Act
 		err := actions.MoveNote(&vault, &mocks.MockNoteManager{}, &mocks.MockUriManager{}, actions.MoveParams{
@@ -43,7 +43,7 @@ func TestMoveNote(t *testing.T) {
 	t.Run("vault.Path returns an error", func(t *testing.T) {
 		// Arrange
 		vaultOp := &mocks.MockVaultOperator{
-			PathError: errors.New("Failed to get vault path"),
+			PathError: errors.New("failed to get vault path"),
 		}
 		// Act
 		err := actions.MoveNote(vaultOp, &mocks.MockNoteManager{}, &mocks.MockUriManager{}, actions.MoveParams{
@@ -58,7 +58,7 @@ func TestMoveNote(t *testing.T) {
 	t.Run("note.Move returns an error", func(t *testing.T) {
 		// Arrange
 		note := mocks.MockNoteManager{
-			MoveErr: errors.New("Failed to execute URI"),
+			MoveErr: errors.New("failed to execute URI"),
 		}
 		// Act
 		err := actions.MoveNote(&mocks.MockVaultOperator{}, &note, &mocks.MockUriManager{}, actions.MoveParams{
@@ -73,7 +73,7 @@ func TestMoveNote(t *testing.T) {
 	t.Run("note.UpdateLinks returns an error", func(t *testing.T) {
 		// Arrange
 		note := mocks.MockNoteManager{
-			UpdateLinksError: errors.New("Failed to execute URI"),
+			UpdateLinksError: errors.New("failed to execute URI"),
 		}
 		// Act
 		err := actions.MoveNote(&mocks.MockVaultOperator{}, &note, &mocks.MockUriManager{}, actions.MoveParams{
@@ -88,7 +88,7 @@ func TestMoveNote(t *testing.T) {
 	t.Run("uri.Execute returns an error", func(t *testing.T) {
 		// Arrange
 		uriManager := &mocks.MockUriManager{
-			ExecuteErr: errors.New("Failed to execute URI"),
+			ExecuteErr: errors.New("failed to execute URI"),
 		}
 		// Act
 		err := actions.MoveNote(&mocks.MockVaultOperator{}, &mocks.MockNoteManager{}, uriManager, actions.MoveParams{
