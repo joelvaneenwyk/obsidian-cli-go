@@ -3,9 +3,10 @@ package obsidian
 import (
 	"encoding/json"
 	"errors"
-	"github.com/Yakitrak/obsidian-cli/pkg/config"
 	"os"
 	"strings"
+
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/config"
 )
 
 var ObsidianConfigFile = config.ObsidianFile

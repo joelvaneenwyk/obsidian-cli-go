@@ -3,9 +3,10 @@ package obsidian_test
 import (
 	"errors"
 	"fmt"
-	"github.com/Yakitrak/obsidian-cli/pkg/obsidian"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/obsidian"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestUriConstruct(t *testing.T) {

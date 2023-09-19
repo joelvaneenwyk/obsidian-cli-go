@@ -1,11 +1,12 @@
 package obsidian_test
 
 import (
-	"github.com/Yakitrak/obsidian-cli/mocks"
-	"github.com/Yakitrak/obsidian-cli/pkg/obsidian"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/joelvaneenwyk/obsidian-cli/mocks"
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/obsidian"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAddMdSuffix(t *testing.T) {

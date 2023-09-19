@@ -3,27 +3,24 @@
 ---
 ![Obs Usage](./docs/usage.png)
 
----
-## [Installation and Usage Manual](https://yakitrak.github.io/obs/)
+# Obsidian CLI
 
----
-
-## Description
-
-Obsidian is a powerful and extensible knowledge base application 
+Obsidian is a powerful and extensible knowledge base application
 that works on top of your local folder of plain text notes. This CLI tool (written in Go) will let you interact with the application using the terminal. You are currently able to open, search, move, create, update and delete notes.
-
----
 
 ## Install
 
+See [Installation and Usage Manual](https://yakitrak.github.io/obs/).
+
 ### Windows
+
 You will need to have [Scoop](https://scoop.sh/) installed. On powershell run:
-```
-scoop bucket add scoop-yakitrak https://github.com/yakitrak/scoop-yakitrak.git
+
+```powershell
+scoop bucket add scoop-yakitrak "https://github.com/yakitrak/scoop-yakitrak.git"
 ```
 
-```
+```powershell
 scoop install obs
 ```
 
@@ -142,7 +139,7 @@ Deletes a given note (path from top level of vault).
 
 ```bash
 # Renames a note in default obsidian
-obs delete "{note-path}" 
+obs delete "{note-path}"
 
 # Renames a note in given obsidian
 obs delete "{note-path}" --vault "{vault-name}"

@@ -2,10 +2,11 @@ package actions_test
 
 import (
 	"errors"
-	"github.com/Yakitrak/obsidian-cli/mocks"
-	"github.com/Yakitrak/obsidian-cli/pkg/actions"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/joelvaneenwyk/obsidian-cli/mocks"
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/actions"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDeleteNote(t *testing.T) {

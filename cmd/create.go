@@ -1,10 +1,11 @@
 package cmd
 
 import (
-	"github.com/Yakitrak/obsidian-cli/pkg/actions"
-	"github.com/Yakitrak/obsidian-cli/pkg/obsidian"
-	"github.com/spf13/cobra"
 	"log"
+
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/actions"
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/obsidian"
+	"github.com/spf13/cobra"
 )
 
 var shouldAppend bool

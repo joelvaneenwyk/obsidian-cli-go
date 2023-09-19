@@ -21,29 +21,30 @@ universal_binaries:
 
 brews:
   - name: obs
-    homepage: https://github.com/Yakitrak/obsidian-cli
+    homepage: https://github.com/joelvaneenwyk/obsidian-cli
     tap:
-      owner: Yakitrak
-      name: homebrew-yakitrak
+      owner: joelvaneenwyk
+      name: homebrew-joelvaneenwyk
     commit_author:
-      name: kartikayjainwal
-      email: kartikayjainwal@gmail.com
+      name: joelvaneenwyk
+      email: joelvaneenwyk@gmail.com
 
 scoops:
   - name: obs
-    homepage: https://github.com/Yakitrak/obsidian-cli
+    homepage: https://github.com/joelvaneenwyk/obsidian-cli
     bucket:
-      owner: Yakitrak
-      name: scoop-yakitrak
+      owner: joelvaneenwyk
+      name: scoop-joelvaneenwyk
     commit_author:
-      name: kartikayjainwal
-      email: kartikayjainwal@gmail.com
-      
+      name: joelvaneenwyk
+      email: joelvaneenwyk@gmail.com
+
 aurs:
   - name: obs-bin
-    homepage: https://github.com/Yakitrak/obsidian-cli
+    homepage: https://github.com/joelvaneenwyk/obsidian-cli
     description: Interact with Obsidian in the terminal. Open, search, create, update and move notes!
     maintainers:
+      - 'Joel Van Eenwyk <joelvaneenwyk at gmail dot com>'
       - 'Kartikay Jainwal <kartikayjainwal at gmail dot com>'
       - 'Jonathan Neidel <aur at jneidel dot com>'
     license: 'MIT'

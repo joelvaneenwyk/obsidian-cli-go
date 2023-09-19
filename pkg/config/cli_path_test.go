@@ -2,9 +2,10 @@ package config_test
 
 import (
 	"errors"
-	"github.com/Yakitrak/obsidian-cli/pkg/config"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/config"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestConfigCliPath(t *testing.T) {

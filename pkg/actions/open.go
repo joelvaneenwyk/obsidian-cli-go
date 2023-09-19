@@ -1,7 +1,7 @@
 package actions
 
 import (
-	"github.com/Yakitrak/obsidian-cli/pkg/obsidian"
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/obsidian"
 )
 
 type OpenParams struct {

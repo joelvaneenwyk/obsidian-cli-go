@@ -3,8 +3,9 @@ package obsidian
 import (
 	"encoding/json"
 	"errors"
-	"github.com/Yakitrak/obsidian-cli/pkg/config"
 	"os"
+
+	"github.com/joelvaneenwyk/obsidian-cli/pkg/config"
 )
 
 var CliConfigPath = config.CliPath
