@@ -44,9 +44,9 @@ aurs:
     homepage: https://github.com/joelvaneenwyk/obsidian-cli
     description: Interact with Obsidian in the terminal. Open, search, create, update and move notes!
     maintainers:
-      - 'Joel Van Eenwyk <joelvaneenwyk at gmail dot com>'
       - 'Kartikay Jainwal <kartikayjainwal at gmail dot com>'
       - 'Jonathan Neidel <aur at jneidel dot com>'
+      - 'Joel Van Eenwyk <joelvaneenwyk at gmail dot com>'
     license: 'MIT'
     private_key: '{{ .Env.AUR_KEY }}'
     git_url: 'ssh://aur@aur.archlinux.org/obs-bin.git'

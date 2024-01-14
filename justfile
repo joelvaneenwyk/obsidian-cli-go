@@ -1,4 +1,5 @@
-BINARY_NAME=obs
+vars:
+    BINARY_NAME = obs
 
 build-all:
 	GOOS=darwin GOARCH=amd64 go build -o bin/${BINARY_NAME}-darwin
@@ -16,4 +17,3 @@ test:
 
 test_coverage:
 	go test ./... -coverprofile=coverage.out
-
