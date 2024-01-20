@@ -1,0 +1,11 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions:
+  - name: obsidian-cli-dictionary
+    path: ./.cspell/obsidian-cli-dictionary.txt
+    addWords: true
+dictionaries:
+  - obsidian-cli-dictionary
+words: []
+ignoreWords: []
+import: []

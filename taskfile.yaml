@@ -1,0 +1,43 @@
+version: '3'
+
+env:
+  BINARY_NAME: obs
+
+tasks:
+
+  build-windows:
+    cmds:
+      - go build -o bin/${BINARY_NAME}-${GOOS}.exe
+    env:
+      GOOS: windows
+      GOARCH: amd64
+
+  build-darwin:
+    cmds:
+      - go build -o bin/${BINARY_NAME}-${GOOS}
+    env:
+      GOOS: darwin
+      GOARCH: amd64
+
+  build-linux:
+    cmds:
+      - go build -o bin/${BINARY_NAME}-${GOOS}
+    env:
+      GOOS: linux
+      GOARCH: amd64
+
+  build:
+    deps: [build-darwin, build-linux, build-windows]
+
+  clean-all:
+    cmds:
+    - go clean
+    - rm bin/${BINARY_NAME:-obs}-darwin
+    - rm bin/${BINARY_NAME:-obs}-linux
+    - rm bin/${BINARY_NAME:-obs}-windows.exe
+
+  test:
+    go test ./...
+
+  test_coverage:
+    go test ./... -coverprofile=coverage.out
