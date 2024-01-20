@@ -1,9 +1,6 @@
 # Obsidian CLI
 
----
 ![Obs Usage](./docs/usage.png)
-
-# Obsidian CLI
 
 Obsidian is a powerful and extensible knowledge base application
 that works on top of your local folder of plain text notes. This CLI tool (written in Go) will let you interact with the application using the terminal. You are currently able to open, search, move, create, update and delete notes.
