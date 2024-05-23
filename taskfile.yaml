@@ -4,6 +4,14 @@ env:
   BINARY_NAME: obs
 
 tasks:
+  default:
+    cmds:
+      - task: build
+      - task: test
+
+  build:
+    deps: [build-darwin, build-linux, build-windows]
+
   build-windows:
     cmds:
       - go build -o bin/${BINARY_NAME}-${GOOS}.exe
@@ -24,9 +32,6 @@ tasks:
     env:
       GOOS: linux
       GOARCH: amd64
-
-  build:
-    deps: [build-darwin, build-linux, build-windows]
 
   clean-all:
     cmds:
