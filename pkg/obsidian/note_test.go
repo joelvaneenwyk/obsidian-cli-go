@@ -184,7 +184,7 @@ func TestUpdateNoteLinks(t *testing.T) {
 		// Act
 		err := noteManager.UpdateLinks(tmpDir, "oldNote", "newNote")
 		// Assert
-		assert.Equal(t, err.Error(), obsidian.VaultReadError)
+		assert.Equal(t, err.Error(), obsidian.VaultWriteError)
 	})
 
 	t.Run("Error on writing to files in vault", func(t *testing.T) {

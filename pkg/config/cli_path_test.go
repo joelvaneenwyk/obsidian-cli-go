@@ -2,6 +2,7 @@ package config_test
 
 import (
 	"errors"
+	"path/filepath"
 	"testing"
 
 	"github.com/joelvaneenwyk/obsidian-cli/pkg/config"
@@ -21,8 +22,8 @@ func TestConfigCliPath(t *testing.T) {
 		obsConfigDir, obsConfigFile, err := config.CliPath()
 		// Assert
 		assert.Equal(t, nil, err)
-		assert.Equal(t, "user/config/dir/obs", obsConfigDir)
-		assert.Equal(t, "user/config/dir/obs/preferences.json", obsConfigFile)
+		assert.Equal(t, "user/config/dir/obs", filepath.ToSlash(obsConfigDir))
+		assert.Equal(t, "user/config/dir/obs/preferences.json", filepath.ToSlash(obsConfigFile))
 	})
 
 	t.Run("UserConfigDir func returns an error", func(t *testing.T) {

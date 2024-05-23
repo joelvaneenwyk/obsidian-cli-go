@@ -69,7 +69,7 @@ func TestVaultPath(t *testing.T) {
 		// Act
 		_, err = vault.Path()
 		// Assert
-		assert.Equal(t, err.Error(), obsidian.ConfigReadError)
+		assert.Equal(t, err.Error(), obsidian.ConfigParseError)
 
 	})
 
