@@ -14,3 +14,5 @@
 # vendor/
 .DS_Store
 bin/
+
+/.idea/GitLink.xml
