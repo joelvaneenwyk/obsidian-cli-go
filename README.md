@@ -2,10 +2,6 @@
 
 ---
 ![obsidian-cli Usage](./docs/usage.png)
-
----
-## [Installation and Usage Manual](https://yakitrak.github.io/obsidian-cli-docs/)
-
 ---
 
 ## Description
@@ -26,8 +22,6 @@ scoop bucket add scoop-yakitrak https://github.com/yakitrak/scoop-yakitrak.git
 ```
 scoop install obsidian-cli
 ```
-
-For full installation instructions, see [Windows installation manual](https://yakitrak.github.io/obsidian-cli-docs/docs/install/windows).
 
 ### Mac and Linux
 
@@ -75,24 +69,50 @@ obsidian-cli print-default
 Open given note name in Obsidian. Note can also be an absolute path from top level of vault.
 
 ```bash
-# Opens note in obsidian
+# Opens note in obsidian vault
 obsidian-cli open "{note-name}"
 
-# Opens note in specified obsidian
+# Opens note in specified obsidian vault
 obsidian-cli open "{note-name}" --vault "{vault-name}"
+
+```
+
+### Daily Note
+
+Open daily note in Obsidian. It will create one (using template) if one does not exist.
+
+```bash
+# Creates / opens daily note in obsidian vault
+obsidian-cli daily
+
+# Creates / opens daily note in specified obsidian vault
+obsidian-cli dauly --vault "{vault-name}"
 
 ```
 
 ### Search Note
 
-Opens obsidian search tab with given search text
+Starts a fuzzy search displaying notes in the terminal from the vault. You can hit enter on a note to open that in Obsidian
 
 ```bash
-# Searches in default obsidian
-obsidian-cli search "{search-text}"
+# Searches in default obsidian vault
+obsidian-cli search 
 
-# Searches in specified obsidian
-obsidian-cli search "{search-text}" --vault "{vault-name}"
+# Searches in specified obsidian vault
+obsidian-cli search --vault "{vault-name}"
+
+```
+
+### Print Note
+
+Prints the contents of given note name in Obsidian.
+
+```bash
+# Prints note in default vault
+obsidian-cli print "{note-name}"
+
+# Prints note in specified obsidian
+obsidian-cli print "{note-name}" --vault "{vault-name}"
 
 ```
 
